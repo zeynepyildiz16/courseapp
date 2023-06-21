@@ -19,4 +19,6 @@ echo $sayi1 . " " . $sayi2;
 // Kontrol K + c İle yorum satırı açabilirsiniz . Ya da kontrol K + U ile kapatabilirsin
 
 
-// Büyük küçük harf duyarlılığı vardır.
+// Büyük küçük harf duyarlılığı vardır. yani sayi ve Sayi birbirinden farklı değişkenlerdir.
+
+// Türkçe karakter kullanmayınız.
