@@ -45,13 +45,21 @@ $kurs3_begeniSayisi = "500";
         <div class="card mb-3>">
             <div class="row">
                 <div class="col-3">
-                    <img src="img/1.jpg" alt="" class="img-fluid rounded-start">
+                    <img src="img/<?php echo $kurs1_resim; ?>" alt="" class="img-fluid rounded-start">
                 </div>
 
                 <div class="col-9">
                     <div class="card-body">
-                        <h5 class="card-title">Php Kursu</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur vel libero reprehenderit quibusdam assumenda laborum rerum corporis eligendi commodi quia!</p>
+                        <h5 class="card-title"><?php echo $kurs1_baslik; ?></h5>
+                        <p class="card-text"><?php echo $kurs1_altBaslik; ?></p>
+                        <P>
+                            <span class="badge rounded-pill text-bg-primary">
+                                Beğeni :<?php echo $kurs1_begeniSayisi; ?>
+                            </span>
+                            <span class="badge rounded-pill text-bg-danger">
+                                Yorum :<?php echo $kurs1_yorumSayisi; ?>
+                            </span>
+                        </P>
                     </div>
                 </div>
             </div>
@@ -59,13 +67,21 @@ $kurs3_begeniSayisi = "500";
         <div class="card mb-3>">
             <div class="row">
                 <div class="col-3">
-                    <img src="img/1.jpg" alt="" class="img-fluid rounded-start">
+                    <img src="img/<?php echo $kurs2_resim; ?>" alt="" class="img-fluid rounded-start">
                 </div>
 
                 <div class="col-9">
                     <div class="card-body">
-                        <h5 class="card-title">Php Kursu</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur vel libero reprehenderit quibusdam assumenda laborum rerum corporis eligendi commodi quia!</p>
+                        <h5 class="card-title"><?php echo $kurs2_baslik; ?></h5>
+                        <p class="card-text"><?php echo $kurs2_altBaslik; ?></p>
+                        <P>
+                            <span class="badge rounded-pill text-bg-primary">
+                                Beğeni :<?php echo $kurs2_begeniSayisi; ?>
+                            </span>
+                            <span class="badge rounded-pill text-bg-danger">
+                                Yorum :<?php echo $kurs2_yorumSayisi; ?>
+                            </span>
+                        </P>
                     </div>
                 </div>
             </div>
@@ -73,13 +89,21 @@ $kurs3_begeniSayisi = "500";
         <div class="card mb-3>">
             <div class="row">
                 <div class="col-3">
-                    <img src="img/1.jpg" alt="" class="img-fluid rounded-start">
+                    <img src="img/<?php echo $kurs3_resim; ?>" alt="" class="img-fluid rounded-start">
                 </div>
 
                 <div class="col-9">
                     <div class="card-body">
-                        <h5 class="card-title">Php Kursu</h5>
-                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur vel libero reprehenderit quibusdam assumenda laborum rerum corporis eligendi commodi quia!</p>
+                        <h5 class="card-title"><?php echo $kurs3_baslik; ?></h5>
+                        <p class="card-text"><?php echo $kurs3_altBaslik; ?></p>
+                        <P>
+                            <span class="badge rounded-pill text-bg-primary">
+                                Beğeni :<?php echo $kurs3_begeniSayisi; ?>
+                            </span>
+                            <span class="badge rounded-pill text-bg-danger">
+                                Yorum :<?php echo $kurs3_yorumSayisi; ?>
+                            </span>
+                        </P>
                     </div>
                 </div>
             </div>
