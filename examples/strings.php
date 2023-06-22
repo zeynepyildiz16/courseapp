@@ -37,3 +37,13 @@ echo strtoupper($mesaj)."<br>"."<br>";
 
 echo ucfirst($mesaj)."<br>";
 // cümlenin baş harfini büyük harfe çevirir.
+
+
+echo "<br>";
+
+echo str_replace(["Aras","eight"],["Zarif","six"],$mesaj)."<br>"; 
+// Replace fonksiyonu sayesinde metindeki arasları zarif eightleri six yaptık.
+
+
+
+?>
