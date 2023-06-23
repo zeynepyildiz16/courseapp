@@ -1,5 +1,6 @@
 <?php
 
+const title = "Popüler Kurslar";
 
 $kurs1_baslik = "Php Kursu";
 $kurs1_altBaslik = "Sıfırdan ileri seviye Php ile web geliştirme";
@@ -55,6 +56,7 @@ $kurs3_url = str_replace([" ", "ç", "ı", "ş", "ü", "ö", "İ", "."], ["-", "
 
 <body>
     <div class="container my-3">
+        <h1 class="mb-3"><?php echo title ?></h1>
         <div class="card mb-3>">
             <div class="row">
                 <div class="col-3">
