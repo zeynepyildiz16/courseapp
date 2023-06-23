@@ -17,7 +17,7 @@ $kurs2_yorumSayisi = "200";
 $kurs2_begeniSayisi = "400";
 
 
-$kurs3_baslik = "Node.js Kursu";
+$kurs3_baslik = "Node.js Kursu";  // node-js-kursu
 $kurs3_altBaslik = "Sıfırdan ileri seviye Node.js ile web geliştirme";
 $kurs3_resim = "3.jpg";
 $kurs3_yayinTarihi = "05.05.2023";
@@ -27,6 +27,14 @@ $kurs3_begeniSayisi = "500";
 $kurs1_altBaslik = ucfirst(strtolower($kurs1_altBaslik));
 $kurs2_altBaslik = ucfirst(strtolower($kurs2_altBaslik));
 $kurs3_altBaslik = ucfirst(strtolower($kurs3_altBaslik));
+
+$kurs1_altBaslik = substr($kurs1_altBaslik, 0, 50) . "...";
+$kurs2_altBaslik = substr($kurs2_altBaslik, 0, 50) . "...";
+$kurs3_altBaslik = substr($kurs3_altBaslik, 0, 50) . "...";
+
+$kurs1_url = str_replace([" ", "ç", "ı", "ş", "ü", "ö", "İ"], ["-", "c", "i", "s", "u", "o", "I"], strtolower($kurs1_baslik));
+$kurs2_url = str_replace([" ", "ç", "ı", "ş", "ü", "ö", "İ"], ["-", "c", "i", "s", "u", "o", "I"], strtolower($kurs2_baslik));
+$kurs3_url = str_replace([" ", "ç", "ı", "ş", "ü", "ö", "İ", "."], ["-", "c", "i", "s", "u", "o", "I", "-"], strtolower($kurs3_baslik));
 
 
 
@@ -54,7 +62,11 @@ $kurs3_altBaslik = ucfirst(strtolower($kurs3_altBaslik));
                 </div>
                 <div class="col-9">
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $kurs1_baslik; ?></h5>
+                        <h5 class="card-title">
+                            <a href="<?php echo $kurs1_url; ?>">
+                                <?php echo $kurs1_baslik; ?>
+                            </a>
+                        </h5>
                         <p class="card-text"><?php echo $kurs1_altBaslik; ?></p>
                         <P>
                             <span class="badge rounded-pill text-bg-primary">
@@ -76,7 +88,11 @@ $kurs3_altBaslik = ucfirst(strtolower($kurs3_altBaslik));
 
                 <div class="col-9">
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $kurs2_baslik; ?></h5>
+                        <h5 class="card-title">
+                            <a href="<?php echo $kurs2_url; ?>">
+                                <?php echo $kurs2_baslik; ?>
+                            </a>
+                        </h5>
                         <p class="card-text"><?php echo $kurs2_altBaslik; ?></p>
                         <P>
                             <span class="badge rounded-pill text-bg-primary">
@@ -98,7 +114,11 @@ $kurs3_altBaslik = ucfirst(strtolower($kurs3_altBaslik));
 
                 <div class="col-9">
                     <div class="card-body">
-                        <h5 class="card-title"><?php echo $kurs3_baslik; ?></h5>
+                        <h5 class="card-title">
+                            <a href="<?php echo $kurs3_url; ?>">
+                                <?php echo $kurs3_baslik; ?>
+                            </a>
+                        </h5>
                         <p class="card-text"><?php echo $kurs3_altBaslik; ?></p>
                         <P>
                             <span class="badge rounded-pill text-bg-primary">
