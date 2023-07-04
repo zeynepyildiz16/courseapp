@@ -19,9 +19,10 @@
 
 
     $plakalar = array("41", "53", "34", "62");
-    $sehirler = array("kocaeli", "rize", "istanbul", "tunceli");
+    $sehirler = array("kocaeli", "rize", "istanbul", "dersim");
 
-    echo "$plakalar[0] : $sehirler[0] ";
+    echo "$plakalar[0] : $sehirler[0]<br> ";
+    echo "$plakalar[3] : $sehirler[3] ";
     ?>
 </body>
 
