@@ -23,6 +23,14 @@
 
     echo "$plakalar[0] : $sehirler[0]<br> ";
     echo "$plakalar[3] : $sehirler[3] ";
+
+
+    $plaka_bilgileri = array("41" => "kocaeli", "53" => "rize", "34" => "istanbul", "62" => "dersim");
+
+
+    echo "<br>";
+    echo $plaka_bilgileri["41"] . "<br> ";
+    echo $plaka_bilgileri["53"] . "<br> ";
     ?>
 </body>
 
