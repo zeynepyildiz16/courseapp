@@ -22,16 +22,28 @@
 
 
 
-    // Dizi elemanlarının sayısını count (say) ile bulduk. 
-    // Diziye yeni bir eleman eklemek istediğimiz zaman array_push fonksiyonunu kullandık
+
+
 
     array_push($notlar, 100);
+    // Diziye yeni bir elemanı Sona eklemek istediğimiz zaman array_push fonksiyonunu kullandık.
+
+
+
+    array_unshift($notlar, 22);
+    // Diziye yeni bir elemanı Başa eklemek istediğimiz zaman rray_unshift fonksiyonunu kullandık.
+
+
+
     echo count($notlar) . "<br>";
     echo count($plakalar) . "<br>";
+    // Dizi elemanlarının sayısını count (say) ile bulduk. 
+
 
     print_r($notlar) . "<br>";
-    echo "<br>";
+    echo "<br>" . "<br>";
     print_r($plakalar) . "<br>";
+    // Dizinin tamamını print_r fonksiyonu ile  yazdırdık.
 
 
 
