@@ -100,6 +100,22 @@
 
 
 
+    echo "<br>" . "<br>";
+
+
+    // Bir dizide geçen elemanların array ve key değerlerinin yerlerini değiştirir array_flip .
+    print_r(array_flip($plakalar));
+
+
+
+    echo "<br>" . "<br>";
+    // Bir dizide geçen elemanlardan birini rastgele getirir array_rand.
+   echo array_rand($notlar);
+
+
+
+
+
     ?>
 </body>
 
