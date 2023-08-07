@@ -110,10 +110,18 @@
 
     echo "<br>" . "<br>";
     // Bir dizide geçen elemanlardan birini rastgele getirir array_rand.
-   echo array_rand($notlar);
+    $indexes = array_rand($notlar, 2);
+    print_r($indexes);
+    echo "<br>" . "<br>";
+    echo $notlar[$indexes[0]];
+    echo "<br>" . "<br>";
+    echo $notlar[$indexes[1]];
+    // Eleman sayısına göre rastgele konumlar için bana bulduğu rastgele elemanların index numarasıyla verir.
 
 
 
+
+    //w3scools.com da zaten tüm dizi fonksiyonları var (Php Array altında)
 
 
     ?>
