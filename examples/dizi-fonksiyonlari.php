@@ -16,14 +16,14 @@
 
 
 
-    $plakalar = array("41" => "kocaeli", "34" => "istanbul", "35" => "izmir");
-    echo "<br>";
+    $plakalar = array("53" => "rize", "62" => "dersim", "34" => "istanbul", "41" => "kocaeli");
+
 
 
 
 
     array_push($notlar, 100);
-    // Diziye yeni bir elemanı Sona eklemek istediğimiz zaman Array_push fonksiyonunu kullandık.
+    //Diziye yeni bir elemanı Sona eklemek istediğimiz zaman Array_push fonksiyonunu kullandık.
 
 
 
@@ -33,12 +33,29 @@
 
 
 
-    array_pop($plakalar);
+    //array_pop($plakalar);
     // Dizinin sonundan eleman silme 
 
 
-    array_shift($plakalar);
+    // array_shift($plakalar);
     // Dizinin başından eleman silme 
+
+
+
+
+
+
+    // SORT ARTAN SIRALAMA işlemini yapar
+    sort($notlar);
+    asort($plakalar); //value alfabe sıralaması.
+    ksort($plakalar); //key bilgisine (yani numara) bilgisine göre sıralama.
+
+
+
+    // ARSORT AZALAN SIRALAMA işlemini yapar
+    rsort($notlar);
+    arsort($plakalar); //value
+    krsort($plakalar); //key
 
 
 
