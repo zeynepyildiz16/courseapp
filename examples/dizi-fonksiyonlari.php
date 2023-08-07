@@ -11,7 +11,6 @@
     <?php
 
     // Array Functions
-
     $notlar = array(60, 70, 40, 80);
 
 
@@ -23,21 +22,30 @@
 
 
 
-
-
     array_push($notlar, 100);
-    // Diziye yeni bir elemanı Sona eklemek istediğimiz zaman array_push fonksiyonunu kullandık.
+    // Diziye yeni bir elemanı Sona eklemek istediğimiz zaman Array_push fonksiyonunu kullandık.
+
 
 
 
     array_unshift($notlar, 22);
-    // Diziye yeni bir elemanı Başa eklemek istediğimiz zaman rray_unshift fonksiyonunu kullandık.
+    // Diziye yeni bir elemanı Başa eklemek istediğimiz zaman Array_unshift fonksiyonunu kullandık.
+
+
+
+    array_pop($plakalar);
+    // Dizinin sonundan eleman silme 
+
+
+    array_shift($plakalar);
+    // Dizinin başından eleman silme 
 
 
 
     echo count($notlar) . "<br>";
     echo count($plakalar) . "<br>";
     // Dizi elemanlarının sayısını count (say) ile bulduk. 
+
 
 
     print_r($notlar) . "<br>";
