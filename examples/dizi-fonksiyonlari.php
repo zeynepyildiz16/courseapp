@@ -67,9 +67,36 @@
 
     print_r($notlar) . "<br>";
     echo "<br>" . "<br>";
-    print_r($plakalar) . "<br>";
+    print_r($plakalar) . "<br>" . "<br>";
     // Dizinin tamamını print_r fonksiyonu ile  yazdırdık.
 
+    echo "<br>" . "<br>";
+
+
+
+    // String bir bilgiyi diziye(array) çevirmek
+    $str = "kocaeli,41";
+    $arr = explode(",", $str);
+    print_r($arr);
+
+
+    // array  bir bilgiyi stringe çevirmek
+    echo "<br>" . "<br>";
+    $arr = array("zeynepyildizbursa", "@gmail.com");
+    $str = implode("", $arr);
+
+    print_r($arr);
+    echo $str;
+
+
+    echo "<br>" . "<br>";
+
+
+
+
+    // Bir dizide geçen elemanların kaç kere tekrar ettiğini array_count_values ile buluruz.
+    $paralar = array("47", "102", "11", "11", "46");
+    print_r(array_count_values($paralar));
 
 
 
