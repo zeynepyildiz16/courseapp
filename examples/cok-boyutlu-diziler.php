@@ -37,7 +37,35 @@
     echo "<br>" . "<br>";
     echo $ogrenciB_ortalama . "<br>";
     echo "**********************";
+    echo "<br>" . "<br>";
+    //Öğrenci C
 
+    $ogrenciC = array(
+        "100" => array(
+            "ad" => "Mehmet",
+            "soyad" => "Yıldız",
+            "notlar" => array(
+                "matematik" => array(50, 70, 84),
+                "fizik" => array(40, 25, 65),
+                "kimya" => array(64, 78, 58),
+
+            )
+
+        ),
+        "200" => array(
+            "ad" => "Hasan",
+            "soyad" => "Tahsin",
+            "notlar" => array(
+                "matematik" => array(45, 100, 70),
+                "fizik" => array(40, 60, 70),
+                "kimya" => array(72, 60, 68),
+            )
+        )
+
+    );
+    echo $ogrenciC["100"]["ad"] . "<br>";
+    echo $ogrenciC["100"]["soyad"] . "<br>";
+    echo $ogrenciC["100"]["notlar"] . "<br>";
 
     ?>
 </body>
