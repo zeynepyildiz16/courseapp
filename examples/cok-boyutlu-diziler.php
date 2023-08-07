@@ -40,7 +40,7 @@
     echo "<br>" . "<br>";
     //Öğrenci C
 
-    $ogrenciC = array(
+    $sinif = array(
         "100" => array(
             "ad" => "Mehmet",
             "soyad" => "Yıldız",
@@ -63,10 +63,18 @@
         )
 
     );
-    echo $ogrenciC["100"]["ad"] . "<br>";
-    echo $ogrenciC["100"]["soyad"] . "<br>";
-    echo $ogrenciC["100"]["notlar"] . "<br>";
+    echo $sinif["100"]["ad"] . "<br>";
+    echo $sinif["100"]["soyad"] . "<br>";
+    echo $sinif["100"]["notlar"]["matematik"][0] . "<br>";
+    echo $sinif["100"]["notlar"]["fizik"][1] . "<br>";
+    echo $sinif["100"]["notlar"]["kimya"][2] . "<br>";
 
+
+    $not1 = $sinif[200]["notlar"]["kimya"][0];
+    $not2 = $sinif[200]["notlar"]["kimya"][1];
+    $not3 = $sinif[200]["notlar"]["kimya"][2];
+    $kimya_ortalama = ($not1 + $not2 + $not3) / 3;
+    echo $kimya_ortalama;
     ?>
 </body>
 
