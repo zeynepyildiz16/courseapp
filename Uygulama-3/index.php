@@ -1,5 +1,6 @@
 <?php
 
+$kategoriler = array("Programlama", "Web Geliştirme", "Veri Analizi");
 const title = "Popüler Kurslar";
 
 $kurs1_baslik = "Php Kursu";
@@ -56,92 +57,44 @@ $kurs3_url = str_replace([" ", "ç", "ı", "ş", "ü", "ö", "İ", "."], ["-", "
 
 <body>
     <div class="container my-3">
-
         <div class="row">
-            <div class="col-3"></div>
-            <div class="col-9"></div>
-        </div>
-
-
-        <h1 class="mb-3"><?php echo title ?></h1>
-        <div class="card mb-3>">
-            <div class="row">
-                <div class="col-3">
-                    <img src="img/<?php echo $kurs1_resim; ?>" alt="" class="img-fluid rounded-start">
-                </div>
-                <div class="col-9">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <a href="<?php echo $kurs1_url; ?>">
-                                <?php echo $kurs1_baslik; ?>
-                            </a>
-                        </h5>
-                        <p class="card-text"><?php echo $kurs1_altBaslik; ?></p>
-                        <P>
-                            <span class="badge rounded-pill text-bg-primary">
-                                Beğeni :<?php echo $kurs1_begeniSayisi; ?>
-                            </span>
-                            <span class="badge rounded-pill text-bg-danger">
-                                Yorum :<?php echo $kurs1_yorumSayisi; ?>
-                            </span>
-                        </P>
-                    </div>
+            <div class="col-3">
+                <div class="list-group">
+                    <a href="#" class="list-group-item-action"><?php echo $kategoriler[0]; ?></a>
+                    <a href="#" class="list-group-item-action"><?php echo $kategoriler[1]; ?></a>
+                    <a href="#" class="list-group-item-action"><?php echo $kategoriler[2]; ?></a>
                 </div>
             </div>
-        </div>
-        <div class="card mb-3>">
-            <div class="row">
-                <div class="col-3">
-                    <img src="img/<?php echo $kurs2_resim; ?>" alt="" class="img-fluid rounded-start">
-                </div>
+            <div class="col-9">
+                <h1 class="mb-3"><?php echo title ?></h1>
+                <div class="card mb-3>">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="img/<?php echo $kurs1_resim; ?>" alt="" class="img-fluid rounded-start">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="<?php echo $kurs1_url; ?>">
+                                        <?php echo $kurs1_baslik; ?>
+                                    </a>
+                                </h5>
+                                <p class="card-text"><?php echo $kurs1_altBaslik; ?></p>
+                                <P>
+                                    <span class="badge rounded-pill text-bg-primary">
+                                        Beğeni :<?php echo $kurs1_begeniSayisi; ?>
+                                    </span>
+                                    <span class="badge rounded-pill text-bg-danger">
+                                        Yorum :<?php echo $kurs1_yorumSayisi; ?>
+                                    </span>
+                                </P>
 
-                <div class="col-9">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <a href="<?php echo $kurs2_url; ?>">
-                                <?php echo $kurs2_baslik; ?>
-                            </a>
-                        </h5>
-                        <p class="card-text"><?php echo $kurs2_altBaslik; ?></p>
-                        <P>
-                            <span class="badge rounded-pill text-bg-primary">
-                                Beğeni :<?php echo $kurs2_begeniSayisi; ?>
-                            </span>
-                            <span class="badge rounded-pill text-bg-danger">
-                                Yorum :<?php echo $kurs2_yorumSayisi; ?>
-                            </span>
-                        </P>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="card mb-3>">
-            <div class="row">
-                <div class="col-3">
-                    <img src="img/<?php echo $kurs3_resim; ?>" alt="" class="img-fluid rounded-start">
-                </div>
+                            </div>
+                        </div>
 
-                <div class="col-9">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <a href="<?php echo $kurs3_url; ?>">
-                                <?php echo $kurs3_baslik; ?>
-                            </a>
-                        </h5>
-                        <p class="card-text"><?php echo $kurs3_altBaslik; ?></p>
-                        <P>
-                            <span class="badge rounded-pill text-bg-primary">
-                                Beğeni :<?php echo $kurs3_begeniSayisi; ?>
-                            </span>
-                            <span class="badge rounded-pill text-bg-danger">
-                                Yorum :<?php echo $kurs3_yorumSayisi; ?>
-                            </span>
-                        </P>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+
+
 
 </body>
 
