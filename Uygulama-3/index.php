@@ -1,42 +1,59 @@
 <?php
-
-$kategoriler = array("Programlama", "Web Geliştirme", "Veri Analizi", "Ofis Uygulamaları");
 const title = "Popüler Kurslar";
+$kategoriler = array("Programlama", "Web Geliştirme", "Veri Analizi", "Ofis Uygulamaları");
 
-$kurs1_baslik = "Php Kursu";
-$kurs1_altBaslik = "Sıfırdan ileri seviye Php ile web geliştirme";
-$kurs1_resim = "1.jpg";
-$kurs1_yayinTarihi = "01.01.2023";
-$kurs1_yorumSayisi = "100";
-$kurs1_begeniSayisi = "300";
+$kurslar = array(
+    "1" => array(
+        "baslik" => "Php Kursu",
+        "altBaslik" => "Sıfırdan ileri seviye Php ile web geliştirme",
+        "resim" => "1.jpg",
+        "yayinTarihi" => "01.01.2023",
+        "yorumSayisi" => "100",
+        "begeniSayisi" => "300",
+
+    ),
+    "2" => array(
+
+        "baslik" => "Python Kursu",
+        "altBaslik" => "Sıfırdan ileri seviye Python prrogramlama",
+        "resim" => "2.jpg",
+        "yayinTarihi" => "03.03.2023",
+        "yorumSayisi" => "200",
+        "begeniSayisi" => "400",
+    ),
+    "3" => array(
+
+        "baslik" => "Node.js Kursu",
+        "altBaslik" => "Sıfırdan ileri seviye Node.js ile web geliştirme",
+        "resim" => "3.jpg",
+        "yayinTarihi" => "05.05.2023",
+        "yorumSayisi" => "300",
+        "begeniSayisi" => "500",
+    ),
+
+);
 
 
-$kurs2_baslik = "Python Kursu";
-$kurs2_altBaslik = "Sıfırdan ileri seviye Python prrogramlama";
-$kurs2_resim = "2.jpg";
-$kurs2_yayinTarihi = "03.03.2023";
-$kurs2_yorumSayisi = "200";
-$kurs2_begeniSayisi = "400";
+$kurs1_altBaslik = ucfirst(strtolower($kurslar["1"]["altBaslik"]));
 
+/* 
+ucfirst    (Girilen değerin ilk kelimesinin baş harfini büyük harfe dönüştürür.)
 
-$kurs3_baslik = "Node.js Kursu";  // node-js-kursu
-$kurs3_altBaslik = "Sıfırdan ileri seviye Node.js ile web geliştirme";
-$kurs3_resim = "3.jpg";
-$kurs3_yayinTarihi = "05.05.2023";
-$kurs3_yorumSayisi = "300";
-$kurs3_begeniSayisi = "500";
+strtolower    (bir metnin veya kelimenin tümünü küçük haflere dönüştürmek için kullanılan fonksiyon)
 
-$kurs1_altBaslik = ucfirst(strtolower($kurs1_altBaslik));
-$kurs2_altBaslik = ucfirst(strtolower($kurs2_altBaslik));
-$kurs3_altBaslik = ucfirst(strtolower($kurs3_altBaslik));
+substr        (Karakter grubu üzerindeki belirlenen bölgeyi almaya yarar.)
+ */
+
+$kurs2_altBaslik = ucfirst(strtolower($kurslar["2"]["altBaslik"]));
+$kurs3_altBaslik = ucfirst(strtolower($kurslar["3"]["altBaslik"]));
 
 $kurs1_altBaslik = substr($kurs1_altBaslik, 0, 50) . "...";
 $kurs2_altBaslik = substr($kurs2_altBaslik, 0, 50) . "...";
 $kurs3_altBaslik = substr($kurs3_altBaslik, 0, 50) . "...";
 
-$kurs1_url = str_replace([" ", "ç", "ı", "ş", "ü", "ö", "İ"], ["-", "c", "i", "s", "u", "o", "I"], strtolower($kurs1_baslik));
-$kurs2_url = str_replace([" ", "ç", "ı", "ş", "ü", "ö", "İ"], ["-", "c", "i", "s", "u", "o", "I"], strtolower($kurs2_baslik));
-$kurs3_url = str_replace([" ", "ç", "ı", "ş", "ü", "ö", "İ", "."], ["-", "c", "i", "s", "u", "o", "I", "-"], strtolower($kurs3_baslik));
+$kurs1_url = str_replace([" ", "ç", "ı", "ş", "ü", "ö", "İ"], ["-", "c", "i", "s", "u", "o", "I"], strtolower($kurslar["1"]["baslik"]));
+$kurs2_url = str_replace([" ", "ç", "ı", "ş", "ü", "ö", "İ"], ["-", "c", "i", "s", "u", "o", "I"], strtolower($kurslar["2"]["baslik"]));
+$kurs3_url = str_replace([" ", "ç", "ı", "ş", "ü", "ö", "İ", "."], ["-", "c", "i", "s", "u", "o", "I", "-"], strtolower($kurslar["3"]["baslik"]));
 
 
 
