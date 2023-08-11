@@ -1,6 +1,6 @@
 <?php
 
-$kategoriler = array("Programlama", "Web Geliştirme", "Veri Analizi");
+$kategoriler = array("Programlama", "Web Geliştirme", "Veri Analizi", "Ofis Uygulamaları");
 const title = "Popüler Kurslar";
 
 $kurs1_baslik = "Php Kursu";
@@ -60,9 +60,10 @@ $kurs3_url = str_replace([" ", "ç", "ı", "ş", "ü", "ö", "İ", "."], ["-", "
         <div class="row">
             <div class="col-3">
                 <div class="list-group">
-                    <a href="#" class="list-group-item-action"><?php echo $kategoriler[0]; ?></a>
-                    <a href="#" class="list-group-item-action"><?php echo $kategoriler[1]; ?></a>
-                    <a href="#" class="list-group-item-action"><?php echo $kategoriler[2]; ?></a>
+                    <a href="#" class="list-group-item list-group-item-action active"><?php echo $kategoriler[0]; ?></a>
+                    <a href="#" class="list-group-item list-group-item-action"><?php echo $kategoriler[1]; ?></a>
+                    <a href="#" class="list-group-item list-group-item-action"><?php echo $kategoriler[2]; ?></a>
+                    <a href="#" class="list-group-item list-group-item-action"><?php echo $kategoriler[3]; ?></a>
                 </div>
             </div>
             <div class="col-9">
