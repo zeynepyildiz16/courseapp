@@ -33,9 +33,6 @@ $kurslar = array(
 
 );
 
-
-$kurs1_altBaslik = ucfirst(strtolower($kurslar["1"]["altBaslik"]));
-
 /* 
 ucfirst    (Girilen değerin ilk kelimesinin baş harfini büyük harfe dönüştürür.)
 
@@ -44,8 +41,13 @@ strtolower    (bir metnin veya kelimenin tümünü küçük haflere dönüştür
 substr        (Karakter grubu üzerindeki belirlenen bölgeyi almaya yarar.)
  */
 
+
+$kurs1_altBaslik = ucfirst(strtolower($kurslar["1"]["altBaslik"]));
+
 $kurs2_altBaslik = ucfirst(strtolower($kurslar["2"]["altBaslik"]));
+
 $kurs3_altBaslik = ucfirst(strtolower($kurslar["3"]["altBaslik"]));
+
 
 $kurs1_altBaslik = substr($kurs1_altBaslik, 0, 50) . "...";
 $kurs2_altBaslik = substr($kurs2_altBaslik, 0, 50) . "...";
