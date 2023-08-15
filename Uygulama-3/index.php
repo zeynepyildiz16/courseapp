@@ -99,6 +99,7 @@ $kurs3_url = str_replace([" ", "ç", "ı", "ş", "ü", "ö", "İ", "."], ["-", "
                                         <?php echo $kurs1_baslik; ?>
                                     </a>
                                 </h5>
+                                jhjjhg
                                 <p class="card-text"><?php echo $kurs1_altBaslik; ?></p>
                                 <P>
                                     <span class="badge rounded-pill text-bg-primary">
