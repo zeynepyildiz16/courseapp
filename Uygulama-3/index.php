@@ -1,6 +1,11 @@
 <?php
 const title = "Popüler Kurslar";
 $kategoriler = array("Programlama", "Web Geliştirme", "Veri Analizi", "Ofis Uygulamaları");
+sort($kategoriler);
+// sort komutu tanımlanan değerleri alfabetik sıraya göre sıralar.
+
+
+
 
 $kurslar = array(
     "1" => array(
@@ -33,25 +38,39 @@ $kurslar = array(
 
 );
 
-/* 
-ucfirst    (Girilen değerin ilk kelimesinin baş harfini büyük harfe dönüştürür.)
+
+$yeni_film = array(
+    "baslik" => "Django Kursu",
+    "altBaslik" => "Sıfırdan ileri seviye Django ile web geliştirme",
+    "resim" => "1.jpg",
+    "yayinTarihi" => "05.05.2023",
+    "yorumSayisi" => "700",
+    "begeniSayisi" => "100",
+);
+
+$kurslar["4"] = $yeni_film;
+
+/*ucfirst    (Girilen değerin ilk kelimesinin baş harfini büyük harfe dönüştürür.)
 
 strtolower    (bir metnin veya kelimenin tümünü küçük haflere dönüştürmek için kullanılan fonksiyon)
 
-substr        (Karakter grubu üzerindeki belirlenen bölgeyi almaya yarar.)
- */
+substr        (Karakter grubu üzerindeki belirlenen bölgeyi almaya yarar.)*/
 
 
 $kurs1_altBaslik = ucfirst(strtolower($kurslar["1"]["altBaslik"]));
+
 
 $kurs2_altBaslik = ucfirst(strtolower($kurslar["2"]["altBaslik"]));
 
 $kurs3_altBaslik = ucfirst(strtolower($kurslar["3"]["altBaslik"]));
 
 
+
 $kurs1_altBaslik = substr($kurs1_altBaslik, 0, 50) . "...";
 $kurs2_altBaslik = substr($kurs2_altBaslik, 0, 50) . "...";
 $kurs3_altBaslik = substr($kurs3_altBaslik, 0, 50) . "...";
+
+
 
 $kurs1_url = str_replace([" ", "ç", "ı", "ş", "ü", "ö", "İ"], ["-", "c", "i", "s", "u", "o", "I"], strtolower($kurslar["1"]["baslik"]));
 $kurs2_url = str_replace([" ", "ç", "ı", "ş", "ü", "ö", "İ"], ["-", "c", "i", "s", "u", "o", "I"], strtolower($kurslar["2"]["baslik"]));
@@ -60,7 +79,6 @@ $kurs3_url = str_replace([" ", "ç", "ı", "ş", "ü", "ö", "İ", "."], ["-", "
 
 
 ?>
-
 
 
 
@@ -87,33 +105,123 @@ $kurs3_url = str_replace([" ", "ç", "ı", "ş", "ü", "ö", "İ", "."], ["-", "
             </div>
             <div class="col-9">
                 <h1 class="mb-3"><?php echo title ?></h1>
+                <p class="lead">
+                    <?php echo count($kategoriler) ?> kategoride <?php echo count($kurslar) ?> kurs listelenmiştir
+                </p>
                 <div class="card mb-3>">
                     <div class="row">
                         <div class="col-4">
-                            <img src="img/<?php echo $kurs1_resim; ?>" alt="" class="img-fluid rounded-start">
+                            <img src="img/<?php echo $kurslar["1"]["resim"]; ?>" alt="" class="img-fluid rounded-start">
                         </div>
                         <div class="col-8">
                             <div class="card-body">
                                 <h5 class="card-title">
                                     <a href="<?php echo $kurs1_url; ?>">
-                                        <?php echo $kurs1_baslik; ?>
+                                        <?php echo $kurslar["1"]["baslik"]; ?>
                                     </a>
                                 </h5>
-                                jhjjhg
-                                <p class="card-text"><?php echo $kurs1_altBaslik; ?></p>
+
+                                <p class="card-text"><?php echo $kurslar["1"]["altBaslik"]; ?></p>
                                 <P>
                                     <span class="badge rounded-pill text-bg-primary">
-                                        Beğeni :<?php echo $kurs1_begeniSayisi; ?>
+                                        Beğeni :<?php echo $kurslar["1"]["begeniSayisi"]; ?>
                                     </span>
                                     <span class="badge rounded-pill text-bg-danger">
-                                        Yorum :<?php echo $kurs1_yorumSayisi; ?>
+                                        Yorum :<?php echo $kurslar["1"]["yorumSayisi"]; ?>
                                     </span>
                                 </P>
 
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div class="card mb-3>">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="img/<?php echo $kurslar["2"]["resim"]; ?>" alt="" class="img-fluid rounded-start">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="<?php echo $kurs1_url; ?>">
+                                        <?php echo $kurslar["2"]["baslik"]; ?>
+                                    </a>
+                                </h5>
+
+                                <p class="card-text"><?php echo $kurslar["2"]["altBaslik"]; ?></p>
+                                <P>
+                                    <span class="badge rounded-pill text-bg-primary">
+                                        Beğeni :<?php echo $kurslar["2"]["begeniSayisi"]; ?>
+                                    </span>
+                                    <span class="badge rounded-pill text-bg-danger">
+                                        Yorum :<?php echo $kurslar["2"]["yorumSayisi"]; ?>
+                                    </span>
+                                </P>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3>">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="img/<?php echo $kurslar["3"]["resim"]; ?>" alt="" class="img-fluid rounded-start">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="<?php echo $kurs1_url; ?>">
+                                        <?php echo $kurslar["3"]["baslik"]; ?>
+                                    </a>
+                                </h5>
+
+                                <p class="card-text"><?php echo $kurslar["3"]["altBaslik"]; ?></p>
+                                <P>
+                                    <span class="badge rounded-pill text-bg-primary">
+                                        Beğeni :<?php echo $kurslar["3"]["begeniSayisi"]; ?>
+                                    </span>
+                                    <span class="badge rounded-pill text-bg-danger">
+                                        Yorum :<?php echo $kurslar["3"]["yorumSayisi"]; ?>
+                                    </span>
+                                </P>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3>">
+                    <div class="row">
+                        <div class="col-4">
+                            <img src="img/<?php echo $kurslar["4"]["resim"]; ?>" alt="" class="img-fluid rounded-start">
+                        </div>
+                        <div class="col-8">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="<?php echo $kurs1_url; ?>">
+                                        <?php echo $kurslar["4"]["baslik"]; ?>
+                                    </a>
+                                </h5>
+                                <p class="card-text"><?php echo $kurslar["4"]["altBaslik"]; ?></p>
+                                <P>
+                                    <span class="badge rounded-pill text-bg-primary">
+                                        Beğeni :<?php echo $kurslar["4"]["begeniSayisi"]; ?>
+                                    </span>
+                                    <span class="badge rounded-pill text-bg-danger">
+                                        Yorum :<?php echo $kurslar["4"]["yorumSayisi"]; ?>
+                                    </span>
+                                </P>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
+
+
+    </div>
 
 
 
